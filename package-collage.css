@@ -1,0 +1,36 @@
+.package-image-collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  background: #d8b25c;
+  transform-origin: center;
+}
+
+.package-image-collage .collage-panel {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-width: 0;
+}
+
+.package-image-collage .collage-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 38%, rgba(2, 23, 31, .62));
+}
+
+.package-image-collage .collage-label {
+  position: absolute;
+  z-index: 1;
+  left: 11px;
+  bottom: 10px;
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 5px rgba(0,0,0,.55);
+}
+
+.package-image-collage .collage-panel:last-child { background-position: 57% center; }
